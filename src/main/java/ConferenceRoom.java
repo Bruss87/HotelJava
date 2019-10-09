@@ -19,9 +19,16 @@ public class ConferenceRoom {
     public int getCapacity() {
         return this.capacity;
     }
-    
+
     public int getCollectionOfGuests() {
         return this.collectionOfGuests.size();
+    }
+
+    public void addGuest(Guest guest) {
+        if (this.getCollectionOfGuests() < this.capacity) {
+//        if (this.collectionOfGuests.size() < this.capacity) {
+            this.collectionOfGuests.add(guest);
+        }
     }
 
 }
