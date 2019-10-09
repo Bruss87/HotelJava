@@ -33,13 +33,13 @@ public class ConferenceRoomTest {
 
     @Test
     public void collectionOfGuestsBeginsAtZero() {
-        assertEquals(0, conferenceRoom1.getCollectionOfGuests());
+        assertEquals(0, conferenceRoom1.countCollectionOfGuests());
     }
 
     @Test
     public void canAddGuestToCollectionOfGuests() {
         conferenceRoom1.addGuest(guest1);
-        assertEquals(1, conferenceRoom1.getCollectionOfGuests());
+        assertEquals(1, conferenceRoom1.countCollectionOfGuests());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class ConferenceRoomTest {
         conferenceRoom1.addGuest(guest2);
         conferenceRoom1.addGuest(guest3);
         conferenceRoom1.addGuest(guest4);
-        assertEquals(3, conferenceRoom1.getCollectionOfGuests());
+        assertEquals(3, conferenceRoom1.countCollectionOfGuests());
 
     }
 

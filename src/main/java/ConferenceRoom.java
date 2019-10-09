@@ -20,12 +20,12 @@ public class ConferenceRoom {
         return this.capacity;
     }
 
-    public int getCollectionOfGuests() {
+    public int countCollectionOfGuests() {
         return this.collectionOfGuests.size();
     }
 
     public void addGuest(Guest guest) {
-        if (this.getCollectionOfGuests() < this.capacity) {
+        if (this.countCollectionOfGuests() < this.capacity) {
 //        if (this.collectionOfGuests.size() < this.capacity) {
             this.collectionOfGuests.add(guest);
         }
