@@ -49,7 +49,20 @@ public class ConferenceRoomTest {
         conferenceRoom1.addGuest(guest3);
         conferenceRoom1.addGuest(guest4);
         assertEquals(3, conferenceRoom1.countCollectionOfGuests());
+    }
 
+
+    @Test
+    public void canRemoveGuestFromCollectionOfGuests() {
+        conferenceRoom1.addGuest(guest1);
+        conferenceRoom1.removeGuest(guest1);
+        assertEquals(0, conferenceRoom1.countCollectionOfGuests());
+    }
+
+    @Test
+    public void cannotRemoveGuestIfRoomIsEmpty() {
+        conferenceRoom1.removeGuest(guest1);
+        assertEquals(0, conferenceRoom1.countCollectionOfGuests());
     }
 
 }

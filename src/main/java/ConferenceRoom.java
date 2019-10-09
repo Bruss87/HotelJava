@@ -31,4 +31,12 @@ public class ConferenceRoom {
         }
     }
 
+    public void removeGuest(Guest guest) {
+        if (this.countCollectionOfGuests() > 0) {
+            this.collectionOfGuests.remove(guest);
+        }
+    }
+
+
+
 }

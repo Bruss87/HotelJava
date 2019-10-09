@@ -17,4 +17,14 @@ public class Hotel {
     public void addConferenceRoom(ConferenceRoom conferenceRoom){
         this.conferenceRooms.add(conferenceRoom);
     }
+
+    public void addGuestToConferenceRoom(Guest guest, ConferenceRoom conferenceRoom) {
+        conferenceRoom.addGuest(guest);
+    }
+
+    public void removeGuestFromConferenceRoom(Guest guest, ConferenceRoom conferenceRoom) {
+        conferenceRoom.removeGuest(guest);
+    }
+
+
 }
