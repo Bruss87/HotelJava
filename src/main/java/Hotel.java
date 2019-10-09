@@ -3,11 +3,12 @@ import java.util.ArrayList;
 public class Hotel {
 
     private ArrayList<ConferenceRoom> conferenceRooms;
-//      private String[] conferenceRooms;
+    private ArrayList<Bedroom> bedrooms;
+
 
     public Hotel(){
         this.conferenceRooms = new ArrayList<ConferenceRoom>();
-//          this.conferenceRooms = new String [3];
+        this.bedrooms =  new ArrayList<Bedroom>();
     }
 
     public int countConferenceRooms(){
@@ -24,6 +25,24 @@ public class Hotel {
 
     public void removeGuestFromConferenceRoom(Guest guest, ConferenceRoom conferenceRoom) {
         conferenceRoom.removeGuest(guest);
+    }
+
+//BEDROOMS methods
+
+    public int countBedrooms(){
+        return this.bedrooms.size();
+    }
+
+    public void addBedroom(Bedroom bedroom){
+        this.bedrooms.add(bedroom);
+    }
+
+    public void addGuestToBedroom(Guest guest, Bedroom bedroom) {
+        bedroom.addGuest(guest);
+    }
+
+    public void removeGuestFromBedroom(Guest guest, Bedroom bedroom) {
+        bedroom.removeGuest(guest);
     }
 
 
