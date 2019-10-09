@@ -19,4 +19,10 @@ public class HotelTest {
         assertEquals(0, hotel.countConferenceRooms());
     }
 
+    @Test
+    public void canAddConferenceRoom(){
+        hotel.addConferenceRoom(conferenceRoom1);
+        assertEquals(1, hotel.countConferenceRooms());
+    }
+
 }
